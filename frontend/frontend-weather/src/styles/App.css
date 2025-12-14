@@ -1,0 +1,73 @@
+/* src/styles/app.css */
+:root {
+  --panel-bg: rgba(255,255,255,0.85);
+  --card-bg: rgba(255,255,255,0.9);
+  --text-color: #111;
+}
+
+* { box-sizing: border-box; font-family: Inter, Arial, sans-serif; }
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app, .weather-page {
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.overlay {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15));
+  padding: 24px;
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  margin: 8px 0 20px 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.panels {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.panel {
+  width: 420px;
+  min-height: 260px;
+  background: var(--panel-bg);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.error {
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  background: rgba(255,0,0,0.12);
+  color: #700;
+  width: fit-content;
+}
+
+.hint {
+  margin-top: 8px;
+  color: white;
+  opacity: 0.9;
+}
